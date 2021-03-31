@@ -1,18 +1,32 @@
 # Retro Reel Recommender
-Building a recommendation for movies mostly in the 19th century.
+
+Building a NLP & content-based recommendation engine API to recommend similar movies using Flask.
 
 ## Background
 
-We build a content based recommendation engine. We use cosine similarity index to determine the similarity between the movies and recommend them.
+I love movies and was interested in working on a recommendation engine. So, I reached out to a Popular Android developer to create a recommendation engine for their retro reel app which serves retro movies from the 1900's onwards. Their requirement was to recommend similar movies as an API by passing only the movieID.
+
+## Environment
+- Numpy
+- Pandas
+- NLTK
+- Rake
+- Scikit learn
+- Pickle
+- Flask
 
 ## Methodology
 
-The following approaches are used to build the recommendation system:
+After the initial EDA, I extracted keywords using Natural Language Processing from the Dataset. After feature engineering, I decided to build a recommender enginer using TF-ID vectorizer. 
+
+I had previously used the following approaches to build the recommendation system using a countvectorizer:
 
 1. Keywords as the feature.
 2. Movie Titles as the feature.
-3. Generating our own keywords using NLP as the feature.
+3. Generating my own keywords using NLP as the feature.
 4. Combining 2 & 3 to get the best of both.
+
+I found that TF-ID vectorizer gave out a better quality of recommendations and chose that model.
 
 Processes involved:
 
@@ -28,8 +42,10 @@ Processes involved:
 4. Model building
 	For each of the approaches, we determine the cosine similarity index and train our model.
 
-5. Model Comparison
-	Compare the results with each of the models.
+5. Model Evaluation
+	Compare the results with each of the models and determine the best model to productionize.
+	
+## Components	
 
 ## Resources 
 1. [How to build a content-based movie recommender system with Natural Language Processing](https://towardsdatascience.com/how-to-build-from-scratch-a-content-based-movie-recommender-with-natural-language-processing-25ad400eb243)
