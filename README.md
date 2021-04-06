@@ -1,3 +1,9 @@
+![GitHub](https://img.shields.io/github/license/Thomas-George-T/Retro-Reel-Recommender?style=flat)
+![GitHub top language](https://img.shields.io/github/languages/top/Thomas-George-T/Retro-Reel-Recommender?style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/Thomas-George-T/Retro-Reel-Recommender?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/Thomas-George-T/Retro-Reel-Recommender?style=flat)
+![ViewCount](https://views.whatilearened.today/views/github/Thomas-George-T/Retro-Reel-Recommender.svg?cache=remove)
+
 # Retro Reel Recommender
 
 Building a NLP & content-based recommendation engine API to recommend similar movies using Flask and Heroku.
