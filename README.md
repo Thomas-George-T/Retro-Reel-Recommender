@@ -6,14 +6,27 @@
 
 # Retro Reel Recommender
 
-Building a NLP & content-based recommendation engine API to recommend similar movies using Flask and Heroku.
+<p align="center">
+	<a href="#">
+		<img src="https://raw.githubusercontent.com/Thomas-George-T/Thomas-George-T/master/assets/flask.svg" alt="Flask" title="Flask" width ="100" />
+	</a>
+	<a href="#">
+		<img src="https://raw.githubusercontent.com/Thomas-George-T/Thomas-George-T/master/assets/heroku.svg" alt="Heroku" title="Heroku" width ="400" hspace=80 />
+	</a>
+	<a href="#">
+		<img src="https://raw.githubusercontent.com/Thomas-George-T/Thomas-George-T/master/assets/python.svg" alt="Python" title="Python" width ="120" />
+	</a>
+</p>
+
+## Description
+
+Building a Content-based recommendation engine API to recommend similar movies using NLP, Flask and Heroku. We generate keywords using NLTK, use it to build the model. Generate an API request using Flask and deploy it to Heroku.
 
 ## Demo
 
 Query String: /api?movieID=Insert-Movie-ID-Here
 
 Sample API : https://retro-reel-recommendation-api.herokuapp.com/api?movieID=b70eec12b79148dfbc97ac3b69ca49bf
-
 
 ## Background
 
@@ -43,7 +56,7 @@ I had previously used the following approaches to build the recommendation syste
 
 I found that TF-ID vectorizer gave out a better quality of recommendations and chose that model.
 
-Processes involved:
+### Processes involved:
 
 1. Data Acquisition
 	Parse the deeply nested JSON file
@@ -62,9 +75,9 @@ Processes involved:
 	
 ## Components	
 
-1. [Retro_Reel_Recommender](Retro_Reel_Recommender.ipynb) : To demonstrate the entire data science lifecycle.
-2. [recommender](recommender.py) : Has functions to return the recommendations for the API calls.
-3. [recommendation_api](recommendation_api.py) : Flask app to run the recommender engine as an API.
+- [Retro_Reel_Recommender](Retro_Reel_Recommender.ipynb) : To demonstrate the entire data science lifecycle.
+- [recommender](recommender.py) : Has functions to return the recommendations for the API calls.
+- [recommendation_api](recommendation_api.py) : Flask app to run the recommender engine as an API.
 
 ## Feedback
 
