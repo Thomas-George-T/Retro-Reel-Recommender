@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 from recommender import recommend_mov #Importing engine function
 import pandas as pd
 import pickle
+import re
 
 app = Flask(__name__)
 
@@ -11,13 +12,18 @@ df = pickle.load(open('movies.pickle', 'rb'))
 
 tfidf_matrix = pickle.load(open('engine.pickle', 'rb'))
 
+remove_punct = re.compile("(\.)|(\')|(\:)|(\,)|(\-)|(\$)|(\")")
+
 #API endpoint
 @app.route('/api', methods=['GET'])
 def process_request():
-    mov_id = request.args.get('movieID')
-    #return mov_id
-    #Call recommendation engine
-    recommended_retro = recommend_mov(mov_id , df, tfidf_matrix)
+    mov_title = request.args.get('title')
+    
+    #Convert the title into lowercase and remove special characters
+    movTitle = re.sub(r'[^\w\s]', '', mov_title.lower())
+    
+    #Remove unwanted whitespaces & Call recommendation engine
+    recommended_retro = recommend_mov(movTitle.strip() , df, tfidf_matrix)
     return jsonify(recommended_retro)
 
 

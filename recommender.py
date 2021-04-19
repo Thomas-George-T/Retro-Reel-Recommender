@@ -1,15 +1,15 @@
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
-def recommend_mov(movieId, df, tfidf_matrix):
+def recommend_mov(movieTitle, df, tfidf_matrix):
     
     try:
-        indices = pd.Series(df.ID)
+        indices = pd.Series(df.Title)
         # getting the index of the movie that matches the title
-        idx = indices[indices == movieId].index[0]
+        idx = indices[indices == movieTitle].index[0]
 
     except:
-        return 'MovieID not found, Please try again'
+        return 'Movie not found, Please try again'
    
     recommended_movies = []
     
@@ -23,6 +23,6 @@ def recommend_mov(movieId, df, tfidf_matrix):
     
     # populating the list with the titles of the best 10 matching movies
     for i in top_10_indexes:
-        recommended_movies.append(list(df.ID)[i])     
+        recommended_movies.append(list(df.Title.str.title())[i])     
       
     return recommended_movies
