@@ -26,7 +26,11 @@ Building a Content-based recommendation engine API to recommend similar movies u
 
 Query String: /api?title=Insert-Movie-Title-Here
 
-Sample API : https://retro-reel-recommendation-api.herokuapp.com/api?title=Charlie Chaplin's The Rink !
+API Link : https://retro-reel-recommendation-api.herokuapp.com/api?title= Insert-Movie-Title-Here
+
+Sample API : https://retro-reel-recommendation-api.herokuapp.com/api?title=Charlie%20Chaplin's%20The%20Rink%20!
+
+Complete list of Movies can be found [here](#feedback)
 
 ## Background
 
