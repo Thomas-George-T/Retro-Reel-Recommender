@@ -24,9 +24,11 @@ Building a Content-based recommendation engine API to recommend similar movies u
 
 ## Demo
 
-Query String: /api?movieID=Insert-Movie-ID-Here
+Query String: /api?movieID= Insert-Movie-ID-Here
 
-Sample API : https://retro-reel-recommendation-api.herokuapp.com/api?movieID=b70eec12b79148dfbc97ac3b69ca49bf
+API : https://retro-reel-movieid.herokuapp.com/api?movieID= Insert-Movie-ID-Here
+
+Sample API : https://retro-reel-movieid.herokuapp.com/api?movieID=b70eec12b79148dfbc97ac3b69ca49bf
 
 ## Background
 
