@@ -93,6 +93,14 @@ I found that TF-ID vectorizer gave out a better quality of recommendations and c
 - [recommender](recommender.py) : Has functions to return the recommendations for the API calls.
 - [recommendation_api](recommendation_api.py) : Flask app to run the recommender engine as an API.
 
+## Usage
+After opening Anaconda environment, to run Flask locally:
+
+```python
+set FLASK_APP=hello.py
+flask run
+```
+
 ## Feedback
 
 Please leave me a feedback of how my engine performed in the Issues tab or email me. Feel free to try out the API calls with different movieID's from the list below.
